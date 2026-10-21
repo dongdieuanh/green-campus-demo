@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Green Campus | Dự án giảm rác thải nhựa</title>
+<style>
+:root{--green:#16734a;--mint:#e9f7ef;--ink:#18352a;--muted:#5c7067;--line:#dce9e1}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#f6faf7;line-height:1.6}
+header{background:linear-gradient(120deg,#104c35,#20845a);color:white;padding:44px 20px}
+.wrap{max-width:1000px;margin:auto;padding:0 20px}.tag{display:inline-block;border:1px solid #bce6ce;border-radius:99px;padding:5px 12px;font-size:13px}
+h1{font-size:clamp(30px,5vw,48px);line-height:1.15;margin:18px 0 12px}h2{margin-top:0}.lead{max-width:700px;color:#e3f6e9}
+main{padding:28px 0 60px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.card{background:white;border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 4px 18px #153d2810}.metric{font-size:28px;font-weight:700;color:var(--green)}.muted{color:var(--muted)}.section{margin-top:26px}.pill{background:var(--mint);color:var(--green);display:inline-block;border-radius:8px;padding:4px 9px;font-size:13px}
+ol,ul{padding-left:22px}.bar{height:12px;background:#e5eee8;border-radius:20px;overflow:hidden}.bar span{display:block;height:100%;background:#2c9a66;border-radius:20px}
+.notice{border-left:4px solid #e0a32b;background:#fff8e8;padding:14px 16px;border-radius:8px;color:#60491b}
+footer{background:#eaf4ed;padding:22px 0;color:var(--muted);font-size:14px}
+button{background:var(--green);color:white;border:0;padding:11px 15px;border-radius:9px;font-weight:700;cursor:pointer}button:hover{background:#0e5b39}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<span class="tag">DỰ ÁN HỌC TẬP · QUẢN LÝ TÀI NGUYÊN & MÔI TRƯỜNG</span>
+<h1>Green Campus</h1>
+<p class="lead">Nghiên cứu và đề xuất giải pháp quản lý rác thải nhựa trong khuôn viên trường đại học, hướng tới phân loại tại nguồn và phát triển bền vững.</p>
+</div></header>
+<main class="wrap">
+<div class="notice"><strong>Lưu ý:</strong> Đây là bản demo minh họa ý tưởng. Các chỉ số bên dưới là ví dụ giao diện, không phải số liệu khảo sát thực tế. Hãy thay bằng dữ liệu đã thu thập trước khi giới thiệu như kết quả nghiên cứu.</div>
+<section class="section grid">
+<div class="card"><div class="muted">Mục tiêu</div><div class="metric">Giảm nhựa</div><p>Khảo sát thói quen sử dụng và đề xuất phương án giảm đồ nhựa dùng một lần.</p></div>
+<div class="card"><div class="muted">Phương pháp</div><div class="metric">4 bước</div><p>Khảo sát · Tổng hợp · Phân tích · Đề xuất.</p></div>
+<div class="card"><div class="muted">Trọng tâm</div><div class="metric">3R</div><p>Reduce – Reuse – Recycle: giảm thiểu, tái sử dụng và tái chế.</p></div>
+</section>
+<section class="section grid">
+<div class="card"><h2>Vấn đề cần tìm hiểu</h2><ul><li>Nguồn phát sinh rác thải nhựa tại khu vực khảo sát.</li><li>Thói quen phân loại và sử dụng sản phẩm dùng một lần.</li><li>Khả năng tiếp cận thùng phân loại và điểm thu gom.</li></ul></div>
+<div class="card"><h2>Giải pháp đề xuất</h2><ul><li>Khảo sát hiện trạng bằng bảng hỏi.</li><li>Đề xuất bố trí điểm phân loại dễ nhận biết.</li><li>Truyền thông khuyến khích bình nước và vật dụng tái sử dụng.</li><li>Đánh giá chi phí, tính khả thi và khả năng duy trì.</li></ul></div>
+</section>
+<section class="section card">
+<h2>Quy trình dự án</h2>
+<p><span class="pill">01 Khảo sát</span></p><div class="bar"><span style="width:25%"></span></div>
+<p><span class="pill">02 Thu thập dữ liệu</span></p><div class="bar"><span style="width:50%"></span></div>
+<p><span class="pill">03 Phân tích hiện trạng</span></p><div class="bar"><span style="width:75%"></span></div>
+<p><span class="pill">04 Đề xuất và đánh giá</span></p><div class="bar"><span style="width:100%"></span></div>
+<p class="muted">Các thanh biểu thị thứ tự các bước, không phải tiến độ hoàn thành thực tế.</p>
+</section>
+<section class="section card">
+<h2>Khung theo dõi dữ liệu</h2>
+<p class="muted">Nhập số liệu khảo sát thực tế để minh họa tỷ lệ người trả lời có phân loại rác. Không nhập dữ liệu giả khi dùng trong hồ sơ ứng tuyển.</p>
+<label for="pct">Tỷ lệ người khảo sát phân loại rác (%)</label><br><br>
+<input id="pct" type="number" min="0" max="100" value="0" style="padding:10px;border:1px solid #cbdcd1;border-radius:8px;width:130px">
+<button onclick="updateMetric()">Cập nhật</button>
+<p id="result" class="metric">Chưa có dữ liệu</p>
+<div class="bar"><span id="resultbar" style="width:0%"></span></div>
+</section>
+<section class="section card">
+<h2>Thông tin dự án</h2>
+<p><strong>Chủ đề:</strong> Quản lý rác thải nhựa và phát triển bền vững.</p>
+<p><strong>Công cụ dự kiến:</strong> Google Forms, Microsoft Excel, PowerPoint.</p>
+<p><strong>Người thực hiện:</strong> Sinh viên / nhóm học tập (bổ sung thông tin thực tế).</p>
+</section>
+</main>
+<footer><div class="wrap">Green Campus · Bản demo học tập. Cập nhật dữ liệu, tên nhóm và kết quả thực tế trước khi công bố.</div></footer>
+<script>
+function updateMetric(){const el=document.getElementById('pct');let n=Number(el.value);if(el.value===''||!Number.isFinite(n)||n<0||n>100){alert('Nhập tỷ lệ từ 0 đến 100.');return;}document.getElementById('result').textContent=n+'% người khảo sát';document.getElementById('resultbar').style.width=n+'%';}
+</script>
+</body></html>
